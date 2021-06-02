@@ -94,27 +94,27 @@
         
         <h1 align="center">Contacto:</h1>
 
-        <form action="php/enviar.php" method="POST" class="formulario">
+        <form action="enviar.php" method="post" class="formulario">
             <link rel="stylesheet" href="css/formulario.css">
             <h1 class="form_titulo"></h1>
 
-            <input type="text" name="name" class="form_input" required>
+            <input type="text" name="name" class="form_input" required="">
             <label for="" class="form_label">Nombre</label>
 
-            <input type="text" name="mail" class="form_input" required>
+            <input type="text" name="mail" class="form_input" required="">
             <label for="" class="form_label">Correo</label>
 
-            <input type="text" name="phone" class="form_input" required>
+            <input type="text" name="phone" class="form_input" required="">
             <label for="" class="form_label">Telefono</label>
 
-            <input type="text" name="message" class="form_input" required>
+            <textarea name="message" class="form_input" required=""></textarea> 
             <label for="" class="form_label">Mensaje</label>
 
-            <input type="submit" class="form_boton">
+            <input type="submit" name="enviar" class="form_boton">
 
             <script src="js/main.js"></script>
-
         </form>
+        
         <br>
         <br>
         <hr>
