@@ -20,5 +20,5 @@ $asunto = 'Mensaje de mi Pagina Web';
 
 mail($para, $asunto, utf8_decode($message), $header);
 
-header("Location:index.html");
+echo 'se envio correctamente';
 ?>
