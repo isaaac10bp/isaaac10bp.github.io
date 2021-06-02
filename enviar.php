@@ -15,7 +15,7 @@ $message .= "Teléfono de contacto: " . $phone . " \r\n";
 $message .= "Mensaje: " . $_POST['message'] . " \r\n";
 $message .= "Enviado el: " . date('d/m/Y', time());
 
-$para = 'isaac10bp@gmail.com';
+$para = 'correodepruebasss1@gmail.com';
 $asunto = 'Mensaje de mi Pagina Web';
 
 mail($para, $asunto, utf8_decode($message), $header);
