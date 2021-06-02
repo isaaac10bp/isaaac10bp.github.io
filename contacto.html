@@ -93,18 +93,26 @@
     <section class="form-sec">
 
         <h1 class="h1" align="center">Contacto:</h1>
-   <form class="formulario">
-        <link rel="stylesheet" href="css/formulario.css">
 
-        <a id="foxyform_embed_link_344509" href="http://es.foxyform.com/">5555</a>
-        <script type="text/javascript">
-            (function (d, t) {
-                var g = d.createElement(t),
-                    s = d.getElementsByTagName(t)[0];
-                g.src = "http://es.foxyform.com/js.php?id=344509&sec_hash=b9fcd712311&width=350px";
-                s.parentNode.insertBefore(g, s);
-            }(document, "script"));
-        </script>
+    <form action="enviar.php" method="POST" class="formulario">
+        <link rel="stylesheet" href="css/formulario.css">
+        <h1 class="form_titulo"></h1>
+
+        <input type="text" name="name" class="form_input" required="">
+        <label for="" class="form_label">Nombre</label>
+
+        <input type="text" name="mail" class="form_input" required="">
+        <label for="" class="form_label">Correo</label>
+
+        <input type="text" name="asunto" class="form_input" required="">
+        <label for="" class="form_label">Asunto</label>
+
+        <textarea name="message" class="form_input" required=""></textarea> 
+        <label for="" class="form_label">Mensaje</label>
+
+        <input type="submit" name="enviar" class="form_boton">
+
+        <script src="js/main.js"></script>
    </form>
         <br>
         <br>
