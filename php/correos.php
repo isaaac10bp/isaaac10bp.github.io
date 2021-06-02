@@ -13,6 +13,6 @@ $mensajeCompleto = $mensaje . "\nAtentamente: " . $nombre;
 
 mail($destinatario, $asunto, $mensajeCompleto, $header );
 
-header("Location: index.html" $newURL);
+header("Location: index.html");
 exit();
 ?>
