@@ -1,0 +1,569 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Permanent+Marker&display=swap");
+
+/*Estilo a Todo*/
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Montserrat", "Times New Roman";
+    background-color:rgb(1, 10, 26);
+}
+header{
+    width: 100%;
+}
+
+/*Estilo a la barra de Menu*/
+.header .main{
+    width: 90%;
+    margin: 0 auto;
+}
+.navbar{
+    margin-top: 30px;
+}
+.navbar .brand{
+    display: flex;
+    margin: 20px 70px;
+    color:springgreen;
+}
+.navbar .brand .fa-wine-bottle{
+    font-size: 1.6em;
+}
+.navbar .brand h3{
+    font-size: 1.3em;
+    margin: 5px 5px;
+}
+.menu ul{
+    display: flex;
+    justify-content: flex-end;
+    margin: -50px 20px;
+}
+.menu ul li{
+    list-style: none;
+    margin-right: 70px;
+}
+.menu ul li a{
+    color: wheat;
+    text-decoration: none;
+    font-size: 1.3em;
+}
+.menu ul li a:hover{
+    color:red;
+}
+.navbar .toggle-menu{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+.navbar .toggle-menu i{
+    font-size: 1.8em;
+    cursor: pointer;
+    color:rgb(44, 152, 214);
+    display: none;
+}
+
+/*Contenedor de Banner*/
+.container-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: khaki;
+}
+.container-info h1{
+    font-size: 5em;
+    font-family: "Permanent Market", cursive;
+    animation: left-move 1s ease-in;
+}
+.container-info h2{
+    font-size: 2em;
+    animation: right-move 1s ease-in;
+}
+.container-info .btn{
+    color: white;
+    font-size: 1.2em;
+    width: 160px;
+    padding: 5px;
+    border-radius: 20px;
+    background-color:red;
+    animation: right-move 1s ease-in;
+    cursor: pointer;
+    text-decoration: none;
+}
+.container-info .img-content img{
+    width: 100px;
+    height: 150px;
+    animation: up-move 1s ease-in;
+}
+.container-info .img-content img:hover{
+    filter: grayscale(100%);
+}
+
+.container-info .social-content li{
+    list-style: none;
+    margin: 10px;
+    animation: left-move 1s ease-in;
+    cursor: pointer;
+
+}
+/*Redes Sociales*/
+.container-info .social-content i{
+    font-size: 1.7em;
+}
+.container-info .social-content i:hover{
+    transform: scale(1.3);
+}
+.icon{
+    width: 40px;
+    height: 40px;
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: all .5s;
+}
+.icon:nth-child(1):hover{
+    box-shadow: 0px 10px #1877f2;
+}
+.icon:nth-child(2):hover{
+    box-shadow: 0px 10px #b80449;
+}
+.icon:nth-child(3):hover{
+    box-shadow: 0px 10px #25d366;
+}
+.fa-facebook-f{
+    color: #1877f2;
+    filter: drop-shadow(0px 10px 10px #1877f2);
+}
+.fa-instagram{
+    color: #b80449;
+    filter: drop-shadow(0px 10px 10px #b80449);
+}
+.fa-whatsapp{
+    color: #25d366;
+    filter: drop-shadow(0px 10px 10px #25d366);
+}
+/*Diseño de los servicios*/
+header .service {
+    margin-top: -100px;
+}
+.contact-form {
+    background-color: rgb(255, 251, 0);
+   
+}
+/*Conjunto de Diseños agrupados*/
+/*Menu de navegacion*/
+@media(max-width: 570px){
+    .navbar .brand i{
+        margin-left: -30px;
+    }
+.navbar .toggle-menu{
+    display: block;
+    margin: -60px 30px;
+}
+.navbar .menu ul{
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color:lightseagreen;
+    position: fixed;
+    margin-top: 30px;
+    transform: translateX(-120%);
+    transition: 1s ease-in;
+}
+.navbar .menu .menu-on{
+    transform: translateX(-4%);
+}
+.navbar .menu ul li{
+    margin: 30px;
+    text-transform: uppercase;
+}
+/*iconos Redes sociales */
+.container-info ,.social-content i{
+    display: none;
+}
+/*Contenedor banner*/
+.container-info{
+    flex-wrap: wrap-reverse;
+    margin: -50px 50px;
+}
+.container-info h1{
+    font-size: 3em;
+    margin-top: -60;
+}
+.container-info h2{
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+.container-info .img-content img{
+    margin-top: 60px;
+}
+
+/*Contenedor productos/servicios*/
+  header .wave svg{
+      margin-top: 100%;
+  }
+}
+
+/*Animacion de Transicion izquierda*/
+@keyframes left-move{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+/*Animacion de transicion derecha*/
+@keyframes right-move{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+/*Animacion de transicion arriba*/
+@keyframes up-move{
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+/*Contenedor de productos-servicios*/
+.products-section{
+    background-color:rgb(0, 87, 138);
+}
+.products-section .laser{
+    grid-column-start: 2;
+    grid-row-start: 2;
+    display: grid;
+    grid-template-rows: 1fr ;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 50px;
+    width: 60%;
+    margin: 0 auto;
+}
+.product-card{
+    grid-column-start: span 1;
+    display: grid;
+    grid-template-rows: 240px auto auto;
+    grid-gap: 16px;
+}
+.product-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+}
+.product-card-footer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.product-category{
+    color: rgb(248, 211, 2);
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+.product-name{
+    color: wheat;
+    font-size: 17px;
+    font-weight: 600;
+    margin: 8px 0;
+}
+.product-description{
+    color:rgb(255, 255, 255);
+    font-size: 13px;
+    font-weight: lighter;
+    margin: 0;
+    line-height: 1.2rem;
+}
+.product-rating{
+    color:red;
+    font-weight: bold;
+}
+.product-review{
+    font-size: 15px;
+    color: black;
+    margin-top: 4px;
+}
+.button-wrapper{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button-wrapper .btn{
+    text-decoration: none;
+}
+.button-wrapper button{
+    background-color: rgb(50, 212, 212);
+    border: 0;
+    border-radius: 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'Times New Roman', Times, serif;
+    max-width: 160px;
+    width: 100%;
+    cursor: pointer;
+    
+}
+/*Pie de pagina*/
+
+h5{
+    text-align: center;
+    color: #fff;
+    font-family:'Courier New', Courier, monospace;
+}
+
+/*Estilo para Formulario*/
+.formulario {
+    width: 500px;
+    max-width: 100%;
+    margin: auto;
+    margin-top: 35px;
+    padding: 15px;
+    position: relative;
+    box-shadow: 0 0 30px 2px rgba(196, 17, 17, 0.938);
+    text-align: center;
+}
+
+.form_titulo {
+    text-align: center;
+    margin-top: 0%;
+    color: rgba(41, 146, 50, 2);
+}
+
+.form_input, .form_label, .form_boton {
+    display: block;
+    width: 100%;
+    font-size: 1em;
+}
+
+.form_input {
+    padding: 7px;   
+    background: transparent;
+    border: 1px solid rgba(5, 5, 5, 1);
+    margin-top: 35px;    
+}
+
+.form_boton {
+    padding: 5px;
+    border: none;
+    background: rgb(95, 91, 91);
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.form_label {
+    position: absolute;
+    margin-top: -28px;
+    color: rgba(0, 0, 0, 0.5);
+    transition: all 0.2s;
+}
+
+.form_input:focus {
+    outline: 1px solid rgba(0, 0, 0, 0.7);
+}
+
+.form_input:focus + .form_label {
+    margin-top: -60px;
+}
+
+.quieto {
+    margin-top: -60px;
+}
+/*Mapa Google Maps*/
+h4{
+    color: black;
+}
+.contact-form .maps{
+     width: 500px;
+     max-width: 100%;
+     margin: auto;
+     position: relative;
+}
+
+/*DISEÑO PARA COMIDA*/
+.body-comida{
+    background-image: url(imagenes/font-comida.jpg);
+}
+
+.body-beb{
+    background-image: url(imagenes/font-beb.jpg);
+}
+
+.logo-comida{
+    display: flex;
+    margin: auto;
+    width: 300px;
+    height: 170px;
+    justify-content: center;
+}
+/*Diseño de contenedores Papas - Alitas*/
+:root{
+    --bg-white: rgb(255,255,255,0.1);
+    --br: 15px;
+    --border: solid 2px rgba(255,255,255,0.5);
+}
+.container-sub{
+    color:darkorange;
+    font-weight: 600;
+    font-size: 1.6em;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    display: grid;
+    grid-template-rows: 1fr 1fr ;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    width: 80%;
+    margin: 0 auto;
+}
+.container-sub .papas{ 
+    text-align: center;
+    vertical-align: -200px;
+}
+.container-sub .alitas{
+    text-align: center;
+}
+.t1{
+    color: cyan;
+    font-size: 1.3em;
+    font-weight: 550;
+    list-style: none;
+}
+.t2{
+    color:cyan;
+    font-size: 1.3em;
+    font-weight: 550;
+    list-style: none;
+}
+.container-inf {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    grid-gap: 60px;
+    color: wheat;
+    background-color: var(--bg-white); 
+    border: solid 1px rgba(255,255,255,0.5);
+    border-radius: 15px;
+    width: 55%;
+    margin: 100px auto;
+    box-shadow: 0 10px 20px 5px rgba(0,0,0,0.5);
+    overflow: hidden;
+    display: flex; 
+    margin-top: 10px;
+    padding: 30px;
+}
+/*Diseño de Tacos*/
+.container-sub-t{
+    text-align: center;
+    color:darkorange;
+    font-weight: 600;
+    font-size: 1.7em;
+}
+.container-inf-t{
+    color: wheat;
+    background-color: var(--bg-white); 
+    border: solid 1px rgba(255,255,255,0.5);
+    border-radius: 15px;
+    width: 40%;
+    margin: 100px auto;
+    box-shadow: 0 10px 20px 5px rgba(0,0,0,0.5);
+    overflow: hidden;
+    display: flex; 
+    margin-top: 10px;
+    padding: 15px;
+    
+}
+.t3{
+    color:cyan;
+    font-size: 1.3em;
+    font-weight: 550;
+    list-style: none;
+}
+.container-sub-b{
+    text-align: center;
+    color:darkorange;
+    font-weight: 600;
+    font-size: 1.7em;
+}
+/*Diseño de Botanas y Hamburguesas*/
+.t4{
+    color:cyan;
+    font-size: 1.3em;
+    font-weight: 550;
+    list-style: none;
+}
+.t5{
+    color: cyan;
+    font-size: 1.3em;
+    font-weight: 550;
+    list-style: none;
+}
+/*Diseño de imagenes*/
+.img1{
+    height: 200px;
+    width: 400px;
+    padding: 40px;
+}
+.img2{
+    height: 200px;
+    width: 400px;
+    padding-left: 200px;
+}
+.img3{
+    height: 200px;
+    width: 400px;
+    justify-content: right;
+}
+/*Diseño de Botones*/
+.btn-s{
+    color: white;
+    text-decoration:none;
+    font-size: 1.2em;
+    width: 200px;
+    padding: 5px;
+    border-radius: 20px;
+    background-color:red;
+    animation: right-move 1s ease-in;
+    cursor: pointer;
+    align-content: left;
+}
+.btn-b{
+    color: white;
+    text-decoration:none;
+    font-size: 1.2em;
+    width: 200px;
+    padding: 5px;
+    border-radius: 20px;
+    background-color:red;
+    animation: right-move 1s ease-in;
+    cursor: pointer;
+    align-content: center;
+}
+.btn-p{
+    color: white;
+    text-decoration:none;
+    font-size: 1.2em;
+    width: 200px;
+    padding: 5px;
+    border-radius: 20px;
+    background-color:red;
+    animation: right-move 1s ease-in;
+    cursor: pointer;
+    justify-content: right;
+}

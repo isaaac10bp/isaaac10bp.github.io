@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Bar</title>
+    <!--Conexion con CSS-->
+    <link rel="stylesheet" href="css/ESStilos.css">
+    <!--Libreria de estilo de FontAwesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"
+        integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv" crossorigin="anonymous" />
+</head>
+
+
+<body>
+    <!--MENU PRINCIPAL
+    En esta parte de la pagina web se encuentran como su nombre lo dice, el menu principal, titulo y la barra menu 
+    con la que podemos navegar en la pagina web. 
+    Lo que hicimos fue con abrir un header donde se ubican todos los elementos ya mencionados esto para separar y tener
+    un mejor orden a la hora de darle estilo en nuestra hoja css.
+    Por lo que a cada div se le asigna una clase, mas abajo esta la barra de navegacion, que tiene links vinculados para 
+    cuando el ususario interactue con ella, esta lo redirigira a otra pagina.-->
+    <header role="banner">
+        <div class="main">
+            <nav class="navbar">
+                <div class="brand">
+                    <!--Icono en el titulo-->
+                    <i class="fas fa-wine-bottle"></i>
+                    <h3>House Bar</h3>
+                </div>
+                <!--Barra menu-->
+                <div class="menu">
+                    <ul id="menu">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="bebidas.html">Bebidas</a></li>
+                        <li><a href="comida.html">Comida</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="toggle-menu" id="toggle-icon">
+                    <i class="fas fa-bars"></i>
+                </div>
+                
+            </nav>
+            <!--Banner central
+            En esta parte de la pagina se encuentra el banner central que esta conformado por el titulo de la pagina 
+            y el logo que escogimos, tambien creamos una clase llamada; social-content en donde colocamos los iconos de las redes sociales.-->
+            <div class="container-info">
+                <div class="main-info">
+                    <h1>House Bar</h1>
+                    <h2>Lo que pasa y sucede en House Bar, se queda en House Bar.</h2>
+                    <button class="btn"><a href="contacto.html" class="btn">Contacto</a></button>
+                </div>
+                <!--Imagen del banner-->
+                <div class="img-content">
+                    <img src="imagenes/Imagen2.png" alt="" />
+                </div>
+                <!--Redes sociales-->
+                <div class="social-content">
+                    <ul>
+                        <!--Community Manager / RSS-->
+                        <div class="icon">
+                        <li><a href="https://www.facebook.com/profile.php?id=100008726955626"><i class="fab fa-facebook-f fa-2x"></i></a></li>
+                        </div>
+                        <div class="icon">
+                        <li><a href=""><i class="fab fa-instagram fa-2x"></i></a></li>
+                        </div>
+                        <div class="icon">
+                        <li><a><i class="fab fa-whatsapp fa-2x"></i></a></li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Estilo del header curva
+        En esta parte de la pagina, hicimos una lina curva a lo largo de la nuestra pagina con coordenadas, para separar el inicio
+        de la seccion de los productos/servicios de esta forma tenemos una mejor organizacion y al mismo
+        tiempo le damos un mejor efecto visual a esta.-->
+
+        <div class="wave" style="height: 150px; overflow: hidden;">
+            <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C149.99,150.00 349.20, -49.98 500.00, 49.98 L500.00,150.00 L0.00,150.00 Z"
+                    style="stroke: none; fill: rgb(0, 87, 138);"></path>
+            </svg>
+        </div>
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Derechos reservados
+        <script>
+            var f = new Date();
+            document.write(f.getFullYear());
+        </script>
+        </script>
+    </h5>
+    <!--Dia y mes f.getDate() + "/" + (f.getMonth() +1) + "/" + -->
+
+    <h5>Este sitio es una prueba escolar</h5>
+    <!--Conexion con JS-->
+    <script src="js/formulario.js"></script>
+</body>
+
+</html>

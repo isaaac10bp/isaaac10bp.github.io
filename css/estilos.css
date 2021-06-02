@@ -1,0 +1,331 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Permanent+Marker&display=swap");
+
+/*Esto le da estilo a todo
+Esta url o link basicamente le da estilo a toda nuestro sitio web, le cambia la fuente de letra y ayuda 
+a la visualizacion de esta.
+En general aqui le dimos estilo a cada uno de los componentes del sitio, pequeños detalles que le dan un toque de un
+sitio web mas profesional, me gusto mucho trabajar con css, aprendi desde como agrupar o acomodar contenedores de distinta
+forma hasta esos detalles como sobreponer el cursor sobre algun elemento y que cambie su 'propiedad.'*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Monserrat", "Sans-Serif";
+    background-color:rgb(190, 129, 231);
+}
+
+header{
+    width: 100%;
+}
+/*Estilo a la barra de menu*/
+.header .main{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.navbar {
+    margin-top: 30px;
+}
+
+.navbar .brand {
+    display: flex;
+    margin: 20px 70px;
+    color: rgb(58, 2, 70);
+}
+
+.navbar .brand .fas fa-tabble{
+    font-size: 1.6em;
+}
+
+.navbar .brand h3{
+    font-size: 1.3em;
+    margin: 5px 5px;
+}
+
+.menu ul{
+    display: flex;
+    justify-content: flex-end;
+    margin: -30px 20px;
+}
+
+.menu ul li{
+    list-style: none;
+    margin-right: 80px;
+}
+
+.menu ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.menu ul li a:hover{
+    color:#370e58; 
+}
+
+.navbar .toggle-menu{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 25px;
+}
+
+.navbar .toggle-menu i{
+    font-size: 1.8em;
+    cursor: pointer;
+    color: #fff;
+    display: none;
+}
+/*Contenedor de la imagen*/
+.container-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.container-info h1{
+    font-size: 5em;
+    font-family: "Permanent Market", cursive;
+    animation: left-move 2s ease-in;
+}
+
+.container-info h2{
+    font-size: 2em;
+    animation: right-move 1s ease-in;
+}
+
+.container-info .btn{
+    font-size: 1.5em;
+    width: 200px;
+    padding: 5px;
+    border-radius: 50px;
+    background-color:rgb(93, 19, 153);
+    border: none;
+    color: #fff;
+    animation: right-move 1s ease-in;
+}
+
+.container-info .btn:hover{
+ background-color:#c219a6;
+}
+
+.container-info .img-content img{
+    max-width: 50%;
+    animation: up-move 1s ease-in;
+    width: 75%;
+    height: 75%;
+}
+.container-info .img-content img:hover{
+    filter: grayscale(100%);
+}
+/*Contenedor de RSS*/
+.container-info .social-content li{
+    list-style: none;
+    margin: 20px;
+    animation: left-move 1s ease-in;
+}
+
+.container-info .social-content i{
+    font-size: 1.3em;
+    color: rgb(58, 2, 70);
+}
+
+.container-info .social-content i:hover{
+    transform: scale(2);
+    color:#fff;
+}
+/*Estilos de grid*/
+header .laser{
+    margin-top: -100px;
+}
+
+/*Conjunto de estilos agrupados*/
+/*Menu de navegacion*/
+@media (max-width: 600px){
+    .navbar .brand i{
+        margin-left: -30px;
+    }
+
+    .navbar .toggle-menu i{
+        display: block;
+        margin: -60px 30px;
+    }
+   
+    .navbar .menu ul{
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color:rgb(94, 58, 151);
+        position: fixed;
+        margin-top: 30px;
+        transform: translateX(-120px);
+        transition: 1s ease-in;
+    }
+
+    .navbar .menu .menu-on{
+        transform: translateX(-4%);
+        text-transform: uppercase;
+    }
+
+    .navbar .menu ul li{
+        margin: 30px;
+        text-transform: uppercase;
+    }
+    
+    /*Iconos de redes sociales*/
+    .container-info .social-content i{
+        display: none;
+    }
+
+    /*Contenedor banner*/
+    .container-info{
+        flex-wrap: wrap-reverse;
+        margin: -50px 50px;
+    }
+    .container-info h1{
+        font-size: 3em;
+        margin-top: -60px
+    }
+    .container-info h2{
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+    .container-info .img-content img{
+        margin-top: 60px;
+    }
+
+    /*Contenedor de productos y servicios*/
+    header .laser{
+        margin-top: 100px;
+    }  
+}
+
+
+/*Animaciones de transicion a la izquierda*/
+@keyframes left-move{
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}   
+
+/*Animaciones de transicion a la derecha*/
+@keyframes right-move{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}   
+
+/*Animaciones de transicion a arriba*/
+@keyframes up-move{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}   
+
+/*Contenedor de productos/servicios */
+.products-section {
+    background-color: rgb(255, 255, 255);
+}
+.products-section .laser{
+    grid-column-start: 2;
+    grid-row-start: 2;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 50px;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.product-card{
+    grid-column-start: span 1;
+    display: grid;
+    grid-template-rows: 240px auto auto;
+    grid-gap: 30px;
+}
+
+.product-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.product-card-footer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.product-category{
+    color: rgb(182, 73, 233);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.product-name{
+    color: rgb(182, 73, 233);
+    font-size: 18px;
+    font-weight: 600;
+    margin: 8px 0;
+}
+
+.product-description{
+    color: #c817d8;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+    line-height: 1.3rem;
+}
+
+.product-rating{
+    color: rgb(52, 17, 61);
+    font-weight: bold;
+}
+
+.button-wrapper{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button-wrapper button{
+    background-color: rgb(229, 123, 255);
+    color: rgb(248, 248, 248);
+    border: 0;
+    border-radius: 2px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: Arial;
+    max-width: 160px;
+    width: 100%;
+}
+
+
+/*Pie de pagina*/
+h5{
+    text-align: center;
+    color: #fff;
+    font-family:'Courier New', Courier, monospace;
+}
+
